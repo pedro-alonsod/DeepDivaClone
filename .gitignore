@@ -113,3 +113,4 @@ ENV/
 _build
 _static
 _templates
+*.png

@@ -1,0 +1,8 @@
+[2019-04-03 08:40:28] [    INFO] --- Setup logging. Log file: log/testMac15/MNIST/lr=0.1/no_cuda=True/03-04-19-08h-40m-28s/logs.txt (setup.py:566)
+[2019-04-03 08:40:28] [    INFO] --- Arguments saved to: log/testMac15/MNIST/lr=0.1/no_cuda=True/03-04-19-08h-40m-28s/args.txt (setup.py:569)
+[2019-04-03 08:40:28] [    INFO] --- Initialize Tensorboard SummaryWriter (setup.py:574)
+[2019-04-03 08:40:47] [ WARNING] --- Git status is ignored! (RunMe.py:205)
+[2019-04-03 08:40:47] [    INFO] --- Randomly chosen seed is: 3075546983 (setup.py:651)
+[2019-04-03 08:40:47] [    INFO] --- Model CNN_basic expects input size of (32, 32) (image_classification.py:63)
+[2019-04-03 08:40:47] [    INFO] --- Loading MNIST from:Data/MNIST (setup.py:268)
+[2019-04-03 08:40:47] [   ERROR] --- Train folder not found in the dataset_folder=Data/MNIST (image_folder_dataset.py:82)
