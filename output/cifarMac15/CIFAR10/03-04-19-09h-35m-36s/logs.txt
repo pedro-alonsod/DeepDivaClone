@@ -1,0 +1,11 @@
+[2019-04-03 09:35:36] [    INFO] --- Setup logging. Log file: ./output/cifarMac15/CIFAR10/03-04-19-09h-35m-36s/logs.txt (setup.py:566)
+[2019-04-03 09:35:36] [    INFO] --- Arguments saved to: ./output/cifarMac15/CIFAR10/03-04-19-09h-35m-36s/args.txt (setup.py:569)
+[2019-04-03 09:35:36] [    INFO] --- Initialize Tensorboard SummaryWriter (setup.py:574)
+[2019-04-03 09:36:20] [    INFO] --- Git origin URL is: b'https://github.com/DIVA-DIA/DeepDIVA.git\n' (RunMe.py:216)
+[2019-04-03 09:36:20] [    INFO] --- Current branch and hash are: b'master\n'  b'12bc110\n' (RunMe.py:217)
+[2019-04-03 09:36:20] [ WARNING] --- Running with an unclean working tree branch! (RunMe.py:221)
+[2019-04-03 09:36:20] [   ERROR] --- Errors when acquiring git status. Use --ignoregit to still run.
+This happens when the git folder has not been found on the file system
+or when the code is not the same as the last version on the repository.
+If you are running on a remote machine make sure to sync the .git folder as well. (RunMe.py:227)
+[2019-04-03 09:36:20] [   ERROR] --- Finished with errors. (Log files at ./output/cifarMac15/CIFAR10/03-04-19-09h-35m-36s ) (RunMe.py:231)

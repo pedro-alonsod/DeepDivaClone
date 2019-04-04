@@ -52,17 +52,17 @@ class CNN_basic(nn.Module):
         # First layer
         self.conv1 = nn.Sequential(
             nn.Conv2d(input_channels, 24, kernel_size=5, stride=3),
-            nn.LeakyReLU()
+            nn.Tanh()
         )
         # Second layer
         self.conv2 = nn.Sequential(
             nn.Conv2d(24, 48, kernel_size=3, stride=2),
-            nn.LeakyReLU()
+            nn.Tanh()
         )
         # Third layer
         self.conv3 = nn.Sequential(
             nn.Conv2d(48, 72, kernel_size=3, stride=1),
-            nn.LeakyReLU()
+            nn.Tanh()
         )
 
         # Classification layer

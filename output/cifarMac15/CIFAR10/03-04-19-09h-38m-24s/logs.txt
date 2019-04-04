@@ -1,0 +1,57 @@
+[2019-04-03 09:38:24] [    INFO] --- Setup logging. Log file: ./output/cifarMac15/CIFAR10/03-04-19-09h-38m-24s/logs.txt (setup.py:566)
+[2019-04-03 09:38:24] [    INFO] --- Arguments saved to: ./output/cifarMac15/CIFAR10/03-04-19-09h-38m-24s/args.txt (setup.py:569)
+[2019-04-03 09:38:24] [    INFO] --- Initialize Tensorboard SummaryWriter (setup.py:574)
+[2019-04-03 09:38:26] [ WARNING] --- Git status is ignored! (RunMe.py:205)
+[2019-04-03 09:38:26] [    INFO] --- Randomly chosen seed is: 1874756013 (setup.py:651)
+[2019-04-03 09:38:27] [    INFO] --- Model CNN_basic expects input size of (32, 32) (image_classification.py:63)
+[2019-04-03 09:38:27] [    INFO] --- Loading CIFAR10 from:./Data/CIFAR/CIFAR10 (setup.py:268)
+[2019-04-03 09:38:27] [ WARNING] --- Missing analytics.csv file for dataset located at ./Data/CIFAR/CIFAR10 (setup.py:419)
+[2019-04-03 09:38:27] [ WARNING] --- Attempt creating analytics.csv file for dataset located at ./Data/CIFAR/CIFAR10 (setup.py:421)
+[2019-04-03 09:38:28] [    INFO] --- Begin computing the mean (dataset_analytics.py:137)
+[2019-04-03 09:42:58] [    INFO] --- Finished computing the mean (dataset_analytics.py:146)
+[2019-04-03 09:42:58] [    INFO] --- Begin computing the std (dataset_analytics.py:147)
+[2019-04-03 09:43:06] [    INFO] --- Finished computing the std (dataset_analytics.py:154)
+[2019-04-03 09:43:06] [    INFO] --- Begin computing class frequencies weights (dataset_analytics.py:206)
+[2019-04-03 09:43:06] [    INFO] --- Finished computing class frequencies weights (dataset_analytics.py:223)
+[2019-04-03 09:43:06] [    INFO] --- Class frequencies (rounded): [10. 10. 10. 10. 10. 10. 10. 10. 10. 10.] (dataset_analytics.py:225)
+[2019-04-03 09:43:06] [ WARNING] --- Created analytics.csv file for dataset located at ./Data/CIFAR/CIFAR10  (setup.py:423)
+[2019-04-03 09:43:06] [    INFO] --- Dataset loaded as images (setup.py:293)
+[2019-04-03 09:43:06] [    INFO] --- Verifying the dataset integrity - quick (dataset_integrity.py:182)
+[2019-04-03 09:43:06] [   ERROR] --- Missing footprint. Cannot verify dataset integrity. (dataset_integrity.py:197)
+[2019-04-03 09:43:06] [ WARNING] --- Creating a new footprint, since it is missing. (dataset_integrity.py:198)
+[2019-04-03 09:43:06] [    INFO] --- Generating the footprint of: ./Data/CIFAR/CIFAR10 (dataset_integrity.py:54)
+[2019-04-03 09:44:25] [    INFO] --- Footprint generated successfully (dataset_integrity.py:57)
+[2019-04-03 09:44:27] [    INFO] --- Setting up model CNN_basic (setup.py:90)
+[2019-04-03 09:44:27] [    INFO] --- Loading weights for data balancing (setup.py:229)
+[2019-04-03 09:44:27] [    INFO] --- Transfer model to GPU (setup.py:102)
+[2019-04-03 09:44:27] [   ERROR] --- Unhandled error: AssertionError('Torch not compiled with CUDA enabled',) (RunMe.py:261)
+[2019-04-03 09:44:27] [   ERROR] --- Traceback (most recent call last):
+  File "./template/RunMe.py", line 254, in _execute
+    **args.__dict__)
+  File "/Users/macbook/Documents/GitHub/DeepDIVA/template/runner/image_classification/image_classification.py", line 73, in single_run
+    **kwargs)
+  File "/Users/macbook/Documents/GitHub/DeepDIVA/template/setup.py", line 103, in set_up_model
+    model = torch.nn.DataParallel(model).cuda()
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/modules/module.py", line 216, in cuda
+    return self._apply(lambda t: t.cuda(device))
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/modules/module.py", line 146, in _apply
+    module._apply(fn)
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/modules/module.py", line 146, in _apply
+    module._apply(fn)
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/modules/module.py", line 146, in _apply
+    module._apply(fn)
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/modules/module.py", line 152, in _apply
+    param.data = fn(param.data)
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/nn/modules/module.py", line 216, in <lambda>
+    return self._apply(lambda t: t.cuda(device))
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/_utils.py", line 69, in _cuda
+    return new_type(self.size()).copy_(self, async)
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/cuda/__init__.py", line 384, in _lazy_new
+    _lazy_init()
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/cuda/__init__.py", line 141, in _lazy_init
+    _check_driver()
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/cuda/__init__.py", line 55, in _check_driver
+    raise AssertionError("Torch not compiled with CUDA enabled")
+AssertionError: Torch not compiled with CUDA enabled
+ (RunMe.py:262)
+[2019-04-03 09:44:27] [   ERROR] --- Execution finished with errors :( (RunMe.py:263)
