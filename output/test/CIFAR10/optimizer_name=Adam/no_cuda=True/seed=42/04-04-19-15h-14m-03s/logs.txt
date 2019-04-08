@@ -1,0 +1,48 @@
+[2019-04-04 15:14:03] [    INFO] --- Setup logging. Log file: ./output/test/CIFAR10/optimizer_name=Adam/no_cuda=True/seed=42/04-04-19-15h-14m-03s/logs.txt (setup.py:566)
+[2019-04-04 15:14:03] [    INFO] --- Arguments saved to: ./output/test/CIFAR10/optimizer_name=Adam/no_cuda=True/seed=42/04-04-19-15h-14m-03s/args.txt (setup.py:569)
+[2019-04-04 15:14:03] [    INFO] --- Initialize Tensorboard SummaryWriter (setup.py:574)
+[2019-04-04 15:14:43] [ WARNING] --- Git status is ignored! (RunMe.py:205)
+[2019-04-04 15:14:43] [    INFO] --- Model CNN_basic expects input size of (32, 32) (image_classification.py:63)
+[2019-04-04 15:14:43] [    INFO] --- Loading CIFAR10 from:./Data/CIFAR/CIFAR10 (setup.py:268)
+[2019-04-04 15:14:44] [    INFO] --- Dataset loaded as images (setup.py:293)
+[2019-04-04 15:14:44] [    INFO] --- Verifying the dataset integrity - quick (dataset_integrity.py:182)
+[2019-04-04 15:14:50] [    INFO] --- Newly measured timestamp: Wed Apr  3 09:43:06 2019 (dataset_integrity.py:188)
+[2019-04-04 15:14:50] [    INFO] --- Dataset integrity verified (quick). The dataset has not been modified (dataset_integrity.py:190)
+[2019-04-04 15:14:50] [    INFO] --- Setting up model CNN_basic (setup.py:90)
+[2019-04-04 15:14:50] [    INFO] --- Loading weights for data balancing (setup.py:229)
+[2019-04-04 15:14:50] [    INFO] --- Begin training (image_classification.py:76)
+[2019-04-04 15:14:50] [   ERROR] --- Unhandled error: TypeError('Traceback (most recent call last):\n  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/utils/data/dataloader.py", line 138, in _worker_loop\n    samples = collate_fn([dataset[i] for i in batch_indices])\n  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/utils/data/dataloader.py", line 138, in <listcomp>\n    samples = collate_fn([dataset[i] for i in batch_indices])\n  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torchvision/datasets/folder.py", line 134, in __getitem__\n    sample = self.transform(sample)\n  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torchvision/transforms/transforms.py", line 60, in __call__\n    img = t(img)\n  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torchvision/transforms/transforms.py", line 163, in __call__\n    return F.normalize(tensor, self.mean, self.std, self.inplace)\n  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torchvision/transforms/functional.py", line 206, in normalize\n    mean = torch.tensor(mean, dtype=torch.float32)\nTypeError: can\'t convert np.ndarray of type numpy.object_. The only supported types are: double, float, float16, int64, int32, and uint8.\n',) (RunMe.py:261)
+[2019-04-04 15:14:50] [   ERROR] --- Traceback (most recent call last):
+  File "./template/RunMe.py", line 254, in _execute
+    **args.__dict__)
+  File "/Users/macbook/Documents/GitHub/DeepDIVA/template/runner/image_classification/image_classification.py", line 80, in single_run
+    val_value[-1] = ImageClassification._validate(val_loader, model, criterion, writer, -1, **kwargs)
+  File "/Users/macbook/Documents/GitHub/DeepDIVA/template/runner/image_classification/image_classification.py", line 152, in _validate
+    return evaluate.validate(val_loader, model, criterion, writer, epoch, **kwargs)
+  File "/Users/macbook/Documents/GitHub/DeepDIVA/template/runner/image_classification/evaluate.py", line 20, in validate
+    return _evaluate(val_loader, model, criterion, writer, epoch, 'val', no_cuda, log_interval, **kwargs)
+  File "/Users/macbook/Documents/GitHub/DeepDIVA/template/runner/image_classification/evaluate.py", line 75, in _evaluate
+    for batch_idx, (input, target) in pbar:
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/tqdm/_tqdm.py", line 959, in __iter__
+    for obj in iterable:
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/utils/data/dataloader.py", line 637, in __next__
+    return self._process_next_batch(batch)
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/utils/data/dataloader.py", line 658, in _process_next_batch
+    raise batch.exc_type(batch.exc_msg)
+TypeError: Traceback (most recent call last):
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/utils/data/dataloader.py", line 138, in _worker_loop
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torch/utils/data/dataloader.py", line 138, in <listcomp>
+    samples = collate_fn([dataset[i] for i in batch_indices])
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torchvision/datasets/folder.py", line 134, in __getitem__
+    sample = self.transform(sample)
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torchvision/transforms/transforms.py", line 60, in __call__
+    img = t(img)
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torchvision/transforms/transforms.py", line 163, in __call__
+    return F.normalize(tensor, self.mean, self.std, self.inplace)
+  File "/anaconda3/envs/deepdiva/lib/python3.5/site-packages/torchvision/transforms/functional.py", line 206, in normalize
+    mean = torch.tensor(mean, dtype=torch.float32)
+TypeError: can't convert np.ndarray of type numpy.object_. The only supported types are: double, float, float16, int64, int32, and uint8.
+
+ (RunMe.py:262)
+[2019-04-04 15:14:50] [   ERROR] --- Execution finished with errors :( (RunMe.py:263)
